@@ -1,4 +1,60 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+body {
+  background: linear-gradient(to bottom, #ffeb0ec0, #ffc413); /* From yellow to orange */
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  height: 100%;
+  border: 50px solid rgba(255, 192, 32, 0.566); 
+  border-radius: 10%;
+  padding-bottom: 100%;
+  margin: -3%; /* Removes default margin around the body */
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  position: relative;
+  width: 70%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
+.profile-pic img {
+  position: relative; /* Ensure it remains above the gradient circle */
+  z-index: 1;
+  border-radius: 50%; /* Makes the image circular */
+  width: 100%;
+  height: auto;
+}
+
+.profile-pic::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%; /* Slightly larger than the image */
+  height: 72%;
+  background: linear-gradient(45deg, red, orange); /* Red-to-orange gradient */
+  border-radius: 50%;
+  z-index: 0; /* Ensures it's behind the image */
+}
+
+h1 {
+  text-align: left;
+  font-size: 1rem;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold; /* Bold weight */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #000000b7;
 }
