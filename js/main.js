@@ -9,8 +9,8 @@
 /**
  * This function prints the string 'Hello World' to the console
  */
-export function helloWorld() {
-    console.log('Hello World');
+function helloWorld() {
+    alert('Hello World');
 }
 
 /**
